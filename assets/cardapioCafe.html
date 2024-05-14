@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe World - Cardápio</title>
+    <link rel="stylesheet" href="/style/cardapio.css">
+    <script async src="carrinho.js"></script>
+    <script async src="finalizar.js"></script>
+    <script async src="formaDePagamento.html"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: #FFFFFF;">Coffee World</a></h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar">
+        </div>
+        <nav class="navigation">
+            <h2 id="categoria">Categorias</h2> <!-- Link para ativar o menu -->
+            <ul id="categoriesMenu"> <!-- Lista de categorias escondida -->
+                <li><a href="cardapio.html">Todos</a></li>
+                <li><a href="cardapioLanches.html">Lanches</a></li>
+                <li><a href="cardapioCafe.html">Cafés Especiais</a></li>
+                <li><a href="cardapioChas.html">Chás</a></li>
+                <li><a href="cardapioCappuccino.html">Cappuccino</a></li>
+                <li><a href="cardapioBebidas.html">Bebidas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/img/cafe_preto.png" alt="Café Preto">
+                <h2>Café Preto</h2>
+                <p>Um Café Forte e Encorpado.</p>
+                <p id="preco">Preço: R$ 4,50</p> 
+                <button onclick="addToCart('Café Preto', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="/img/cafe_expresso.png" alt="Café Expresso">
+                <h2>Café Expresso</h2>
+                <p>Intenso e concentrado.</p>
+                <p id="preco">Preço: R$ 2,80</p> 
+                <button onclick="addToCart('Café Expresso', 2.80)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe_doppio.png" alt="Café Doppio">
+                <h2>Café Doppio</h2>
+                <p>Dupla dose de intensidade.</p>
+                <p id="preco">Preço: R$ 5,50</p> 
+                <button onclick="addToCart('Café Doppio', 5.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe-gourmet.jpg" alt="Café Gourmet">
+                <h2>Café Gourmet</h2>
+                <p>Uma mistura indulgente de sabores ricos e complexos.</p>
+                <p id="preco">Preço: R$ 8.00</p> 
+                <button onclick="addToCart('Café Gourmet', 8.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe_macchiato.jpeg" alt="Café Macchiato">
+                <h2>Café Macchiato</h2>
+                <p>Espresso intenso com uma leve camada de espuma de leite.</p>
+                <p id="preco">Preço: R$ 7,00</p> 
+                <button onclick="addToCart('Café Macchiato', 7.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe_americano.jpg" alt="Café Americano">
+                <h2>Café Americano</h2>
+                <p>Café suave e aromático, <br>com sabor profundo.</p>
+                <p id="preco">Preço: R$ 4,00</p> 
+                <button onclick="addToCart('Café Americano', 4.00)">Adicionar ao Carrinho</button>
+
+                <div class="carrinho">
+                    <h2>Carrinho</h2>
+                    <ul id="lista-carrinho">
+                        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+                    </ul>
+                    <p>Total: <span id="total-carrinho">R$ 0,00</span></p>
+                    <!-- Botão para finalizar a compra -->
+                    <a href="formaDePagamento.html"><button id="forma-de-pagamento" onclick="checkout()" class="finalizar-btn">Finalizar Pedido</button></a>
+                </div>
+        
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Coffe World. Todos os direitos reservados.</p>
+        <footer>
+
+</body>
+</html>

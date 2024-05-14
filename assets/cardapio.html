@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe World - Cardápio</title>
+    <link rel="stylesheet" href="/style/cardapio.css">
+    <script async src="carrinho.js"></script>
+    <script async src="finalizar.js"></script>
+    <script async src="formaDePagamento.html"></script>
+</head>
+<body>
+    
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: #FFFFFF;">Coffee World</a></h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar">
+        </div>
+        <nav class="navigation">
+            <h2 id="categoria">Categorias</h2> <!-- Link para ativar o menu -->
+            <ul id="categoriesMenu"> <!-- Lista de categorias escondida -->
+                <li><a href="cardapio.html">Todos</a></li>
+                <li><a href="cardapioLanches.html">Lanches</a></li>
+                <li><a href="cardapioCafe.html">Cafés Especiais</a></li>
+                <li><a href="cardapioChas.html">Chás</a></li>
+                <li><a href="cardapioCappuccino.html">Cappuccino</a></li>
+                <li><a href="cardapioBebidas.html">Bebidas</a></li>
+                <li><a href="teste.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/img/cafe_preto.png"  alt="Café Preto">
+                <h2>Café Preto</h2>
+                <p>Um café forte e encorpado.</p>
+                <p id="preco">Preço: R$ 4,50</p> 
+                <button onclick="addToCart('Café Preto', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="/img/cafe_expresso.png" alt="Café Expresso">
+                <h2>Café Expresso</h2>
+                <p>Intenso e concentrado.</p>
+                <p id="preco">Preço: R$ 2,80</p> 
+                <button onclick="addToCart('Café Expresso', 2.80)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe_doppio.png" alt="Café Doppio">
+                <h2>Café Doppio</h2>
+                <p>Dupla dose de intensidade.</p>
+                <p id="preco">Preço: R$ 5,50</p> 
+                <button onclick="addToCart('Café Doppio', 5.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe-gourmet.jpg" alt="Café Gourmet">
+                <h2>Café Gourmet</h2>
+                <p>Uma mistura indulgente de sabores ricos e complexos.</p>
+                <p id="preco">Preço: R$ 8.00</p> 
+                <button onclick="addToCart('Café Gourmet', 8.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe_macchiato.jpeg" alt="Café Macchiato">
+                <h2>Café Macchiato</h2>
+                <p>Espresso intenso com uma leve camada de espuma de leite.</p>
+                <p id="preco">Preço: R$ 7,00</p> 
+                <button onclick="addToCart('Café Macchiato', 7.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cafe_americano.jpg" alt="Café Americano">
+                <h2>Café Americano</h2>
+                <p>Café suave e aromático, <br>com sabor profundo.</p>
+                <p id="preco">Preço: R$ 4,00</p> 
+                <button onclick="addToCart('Café Americano', 4.00)">Adicionar ao Carrinho</button>
+
+            </div>
+
+            <div class="menu-item">
+                <img src="/img/coca-2litros.png" alt="Café Preto">
+                <h2>Coca Cola</h2>
+                <p>2 litros</p>
+                <p id="preco">Preço: R$ 9,50</p> 
+                <button onclick="addToCart('Coca Cola 2 litros', 9.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="/img/coca-600.webp" alt="Café Expresso">
+                <h2>Coca Cola</h2>
+                <p>600 ml</p>
+                <p id="preco">Preço: R$ 4,50</p> 
+                <button onclick="addToCart('coca-600', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/coca-350.jpg" alt="Café Doppio">
+                <h2>Coca Cola</h2>
+                <p>350 ml</p>
+                <p id="preco">Preço: R$ 5,50</p> 
+                <button onclick="addToCart('Coca Cola 600 ml', 5.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/suco-laranja.jpg" alt="Café Gourmet">
+                <h2>Suco de Laranja Prats</h2>
+                <p>1 litro</p>
+                <p id="preco">Preço: R$ 8.00</p> 
+                <button onclick="addToCart('Suco de Laranja Prats', 8.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/guarana-2litros.jpg" alt="Café Macchiato">
+                <h2>Guarana Antartica</h2>
+                <p>2 litros</p>
+                <p id="preco">Preço: R$ 7,00</p> 
+                <button onclick="addToCart('Guarana Antartica 2 litros', 7.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/guarana-350.jpg" alt="Café Americano">
+                <h2>Guarana Antartica</h2>
+                <p>350 ml</p>
+                <p id="preco">Preço: R$ 4,00</p> 
+                <button onclick="addToCart('Guarana Antartica 350', 4.00)">Adicionar ao Carrinho</button>
+
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/img/cap-chantilly.jpg" alt="Café Preto">
+                <h2>Cappuccino com Chantilly</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 4,50</p> 
+                <button onclick="addToCart('Cappuccino com Chantilly', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="/img/cap-nutella.jpg" alt="Café Expresso">
+                <h2>Cappuccino com Nutella</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 2,80</p> 
+                <button onclick="addToCart('Cappuccino com Nutella', 2.80)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cap-marsh.avif" alt="Café Doppio">
+                <h2>Cappuccino Com Marshmellow</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 5,50</p> 
+                <button onclick="addToCart(' Cappuccino Com Marshmellow', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/img/cha-camo.webp" alt="Café Preto">
+                <h2>Chá de Camomila</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 4,50</p> 
+                <button onclick="addToCart('Chá de Camomila', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="/img/cha-de-erva-doce.jpg" alt="Café Expresso">
+                <h2>Chá de Erva Doce</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 2,80</p> 
+                <button onclick="addToCart('Chá de Erva Doce', 2.80)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/cha-de-hortela.jpg" alt="Café Doppio">
+                <h2>Chá de Hortelã</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 5,50</p> 
+                <button onclick="addToCart('Chá de Hortelã', 5.50)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/img/bauru-tradicional.webp" alt="Café Preto">
+                <h2>Pão Com Presunto e Queijo</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 4,50</p> 
+                <button onclick="addToCart('Pão Com Presunto e Queijo', 4.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="/img/Lanche-de-peito-de-peru.jpg" alt="Café Expresso">
+                <h2>Sanduiche C/ Peito de Peru</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 10.90</p> 
+                <button onclick="addToCart('Sanduiche C/ Peito de Peru', 10.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/sanduiche-natural.webp" alt="Café Doppio">
+                <h2>Sanduiche Natural</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 7,50</p> 
+                <button onclick="addToCart('Sanduiche Natural', 7.50)">Adicionar ao Carrinho</button>
+                
+                <div class="carrinho">
+                    <h2>Carrinho</h2>
+                    <ul id="lista-carrinho">
+                        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+                    </ul>
+                    <p>Total: <span id="total-carrinho">R$ 0,00</span></p>
+                    <!-- Botão para finalizar a compra -->
+                   
+                    <a href="formaDePagamento.html"><button id="forma-de-pagamento" onclick="checkout()" class="finalizar-btn">Finalizar Pedido</button></a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Coffe World. Todos os direitos reservados.</p>
+            <footer>
+    </div>
+</body>
+</html>

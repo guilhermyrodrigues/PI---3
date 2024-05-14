@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe World - Cardápio</title>
+    <link rel="stylesheet" href="/style/cardapio.css">
+    <script async src="carrinho.js"></script>
+    <script async src="finalizar.js"></script>
+    <script async src="formaDePagamento.html"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: #FFFFFF;">Coffee World</a></h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar">
+        </div>
+        <nav class="navigation">
+            <h2 id="categoria">Categorias</h2> <!-- Link para ativar o menu -->
+            <ul id="categoriesMenu"> <!-- Lista de categorias escondida -->
+                <li><a href="cardapio.html">Todos</a></li>
+                <li><a href="cardapioLanches.html">Lanches</a></li>
+                <li><a href="cardapioCafe.html">Cafés Especiais</a></li>
+                <li><a href="cardapioChas.html">Chás</a></li>
+                <li><a href="cardapioCappuccino.html">Cappuccino</a></li>
+                <li><a href="cardapioBebidas.html">Bebidas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/img/bauru-tradicional.webp" alt="Café Preto">
+                <h2>Pão Com Presunto e Queijo</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 10.90</p> 
+                <button onclick="addToCart('Pão Com Presunto e Queijo', 10.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="/img/Lanche-de-peito-de-peru.jpg" alt="Café Expresso">
+                <h2>Sanduiche C/ Peito de Peru</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 7.90</p> 
+                <button onclick="addToCart('Sanduiche C/ Peito de Peru', 7.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/sanduiche-natural.webp" alt="Café Doppio">
+                <h2>Sanduiche Natural</h2>
+                <p></p>
+                <p id="preco">Preço: R$ 7,50</p> 
+                <button onclick="addToCart('Sanduiche Natural', 7.50)">Adicionar ao Carrinho</button>
+                <div class="carrinho">
+                    <h2>Carrinho</h2>
+                    <ul id="lista-carrinho">
+                        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+                    </ul>
+                    <p>Total: <span id="total-carrinho">R$ 0,00</span></p>
+                    <!-- Botão para finalizar a compra -->
+                    <a href="formaDePagamento.html"><button id="forma-de-pagamento" onclick="checkout()" class="finalizar-btn">Finalizar Pedido</button></a>
+                </div>
+        
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Coffe World. Todos os direitos reservados.</p>
+        <footer>
+</body>
+</html>
+
